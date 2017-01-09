@@ -1,81 +1,87 @@
-<?php
-$this->headLink()
-    ->prependStylesheet('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css')
-    ->prependStylesheet('https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css');
-
-$this->inlineScript()
-    ->prependFile('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js')
-    ->prependFile('https://code.jquery.com/jquery-2.1.4.min.js');
-?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <?php echo $this->headTitle('zend-expressive')->setSeparator(' - ')->setAutoEscape(false) ?>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <?php echo $this->headMeta(); ?>
-    <?php echo $this->headLink(); ?>
-    <style>
-        body { padding-top: 60px; }
-        .app { display: flex; min-height: 100vh; flex-direction: column; }
-        .app-content { flex: 1; }
-        .app-footer { padding-bottom: 1em; }
-        .zf-green, h2 a { color: #68b604; }
-    </style>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Freelancer - Start Bootstrap Theme</title>
+
+    <!-- Theme CSS -->
+    <link href="asset/app.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
 </head>
-<body class="app">
-    <header class="app-header">
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="<?php echo $this->url('home') ?>">
-                        <img src="/zf-logo.png" alt="Zend Expressive" />
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li>
-                            <a href="https://zendframework.github.io/zend-expressive/" target="_blank">
-                                <i class="fa fa-book"></i> Docs
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/zendframework/zend-expressive" target="_blank">
-                                <i class="fa fa-wrench"></i> Contribute
-                            </a>
-                        </li>
-                        <li>
-                            <a href="<?php echo $this->url('api.ping') ?>">
-                                Ping Test
-                            </a>
-                        </li>
-                    </ul>
+
+<body id="page-top" class="index">
+
+<!-- Navigation -->
+<nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand" href="#page-top">Start Bootstrap</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li class="hidden">
+                    <a href="#page-top"></a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#portfolio">Portfolio</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#about">About</a>
+                </li>
+                <li class="page-scroll">
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <img class="img-responsive" src="asset/img/profile.png" alt="">
+                <div class="intro-text">
+                    <span class="name">Start Bootstrap</span>
+                    <hr class="star-light">
+                    <span class="skills">Web Developer - Graphic Artist - User Experience Designer</span>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <div class="app-content">
-        <main class="container">
-            <?php echo $this->content ?>
-        </main>
-    </div>
-
-    <footer class="app-footer">
-        <div class="container">
-            <hr />
-            <p>
-                &copy; 2005 - <?php echo date('Y') ?> by Zend Technologies Ltd. All rights reserved.
-            </p>
         </div>
-    </footer>
+    </div>
+</header>
 
-    <?php echo $this->inlineScript(); ?>
+<?= $this->content ?>
+
+<script src="asset/app.js"></script>
+
 </body>
+
 </html>
